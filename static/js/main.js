@@ -60,7 +60,7 @@ function show() {
     
     placeholderCity.innerText = wthData.name;
     placeholderTemp.innerText = `${Math.round(wthData.main.temp)}\xB0C`;
-    placeholderIcon.src = `http://openweathermap.org/img/wn/${wthData.weather[0].icon}@4x.png`;
+    placeholderIcon.src = `https://openweathermap.org/img/wn/${wthData.weather[0].icon}@4x.png`;
     placeholderCondition.innerText = wthData.weather[0].description; 
     placeholderHumidity.innerText = `${Math.round(wthData.main.humidity)} %`;
     placeholderPressure.innerText = `${Math.round(wthData.main.pressure)} hPa`;
