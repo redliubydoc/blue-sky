@@ -1,4 +1,4 @@
-const protocol = 'http';
+const protocol = 'https';
 const host = window.location.host;
 
 const placeholderCity = document.getElementById('main-city');
