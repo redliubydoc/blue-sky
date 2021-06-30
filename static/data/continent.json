@@ -1,0 +1,50 @@
+{
+    "Africa": {
+        "id": "AF",
+        "countries": [
+            "BF", "BI", "BJ", "BW", "RW", "RE", "GW", "GQ", "GA", "GN", "GM", "GH", "TN", "ZM", "EH", "EG", "ZA", "ET", "SO", "ZW", "ER", "MG", "MA", "ML", "MU", "MW", "MR", "UG", "TZ", "SH", "NA", "NE", "NG", "CI", "CM", "CG", "CF", "CD", "CV", "SZ", "KE", "SS", "KM", "ST", "SN", "SL", "SC", "SD", "DJ", "DZ", "YT", "LR", "LS", "TG", "TD", "LY", "AO", "MZ"
+        ]
+    },
+
+    "Antarctica": {
+        "id": "AN",
+        "countries": [
+            "BV", "GS", "HM", "TF", "AQ"
+        ]    
+    },
+
+    "Asia": {
+        "id": "AS",
+        "countries": [
+            "BD", "BN", "BH", "BT", "TM", "TJ", "JP", "GE", "OM", "JO", "HK", "PS", "IQ", "PK", "PH", "VN", "SA", "UZ", "MM", "MO", "MN", "MV", "MY", "IL", "IO", "NP", "CN", "CC", "CX", "SY", "KG", "KH", "KR", "KP", "KW", "KZ", "SG", "YE", "LB", "LA", "TW", "TR", "LK", "TH", "AE", "AF", "IR", "AM", "IN", "AZ", "ID", "QA"
+        ]
+    },
+
+    "Europe": {
+        "id": "EU",
+        "countries": [
+            "BE", "BG", "BA", "JE", "BY", "RU", "RS", "RO", "GR", "GG", "GB", "GI", "HR", "HU", "PT", "SJ", "PL", "EE", "IT", "ES", "ME", "MD", "MC", "MK", "MT", "IM", "FR", "FI", "FO", "NL", "NO", "XK", "CH", "CZ", "CY", "SK", "SI", "SM", "SE", "DK", "DE", "LI", "LV", "LT", "LU", "VA", "AD", "IS", "AL", "AT", "AX", "IE", "UA"
+        ]
+    },
+
+    "North America": {
+        "id": "NA",
+        "countries":[
+            "BB", "BL", "BM", "JM", "BQ", "BS", "BZ", "GT", "GP", "GD", "SV", "GL", "HT", "HN", "PR", "PA", "PM", "MF", "MQ", "MS", "MX", "NI", "CA", "CR", "CW", "CU", "SX", "KN", "KY", "DO", "DM", "VG", "US", "LC", "TT", "TC", "VC", "AG", "AI", "VI", "AW"
+        ]
+    },
+
+    "Oceania": {
+        "id": "OC",
+        "countries":[
+            "WF", "WS", "TL", "TK", "GU", "PW", "PF", "PG", "PN", "SB", "MH", "MP", "FJ", "FM", "VU", "NC", "NF", "NZ", "NR", "NU", "CK", "KI", "UM", "TV", "TO", "AS", "AU"
+        ]
+    },
+
+    "South America": {
+        "id": "SA",
+        "countries":[
+            "BO", "BR", "GY", "GF", "VE", "PY", "PE", "EC", "FK", "CO", "CL", "SR", "UY", "AR"
+        ]
+    }
+}
