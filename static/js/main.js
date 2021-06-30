@@ -26,7 +26,7 @@ let currentLon;
     // fetch current location
     let xhr1 = new XMLHttpRequest();
 
-    xhr1.open('get', 'http://ip-api.com/json/', false);
+    xhr1.open('get', 'https://extreme-ip-lookup.com/json/', false);
 
     xhr1.onload = function() {
         if(this.status === 200) {
