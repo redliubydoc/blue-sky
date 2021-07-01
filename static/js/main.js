@@ -60,8 +60,8 @@ function show() {
     
     placeholderCity.innerText = wthData.name;
     placeholderTemp.innerText = `${Math.round(wthData.main.temp)}\xB0C`;
-    placeholderIcon.src = `https://openweathermap.org/img/wn/${wthData.weather[0].icon}@4x.png`;
-    placeholderCondition.innerText = wthData.weather[0].description; 
+    placeholderIcon.src = `https://openweathermap.org/img/wn/${wthData.weather[wthData.weather.length-1].icon}@4x.png`;
+    placeholderCondition.innerText = wthData.weather[wthData.weather.length-1].description; 
     placeholderHumidity.innerText = `${Math.round(wthData.main.humidity)} %`;
     placeholderPressure.innerText = `${Math.round(wthData.main.pressure)} hPa`;
     placeholderWind.innerText = `${Math.round(wthData.wind.speed * 36)/10 } kph`;
