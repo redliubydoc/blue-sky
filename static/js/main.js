@@ -1,4 +1,4 @@
-const protocol = 'https';
+const protocol = window.location.protocol;
 const host = window.location.host;
 
 const placeholderCity = document.getElementById('main-city');
@@ -25,8 +25,7 @@ let currentLon;
     
     // fetch current location
     let xhr1 = new XMLHttpRequest();
-
-    xhr1.open('get', 'https://extreme-ip-lookup.com/json/', false);
+    xhr1.open('get', `${protocol}//extreme-ip-lookup.com/json/`, false);
 
     xhr1.onload = function() {
         if(this.status === 200) {
@@ -40,7 +39,7 @@ let currentLon;
 
     // get weather data based on current location
     let xhr2 = new XMLHttpRequest();
-    xhr2.open('get', `${protocol}://${host}/api?lat=${currentLat}&lon=${currentLon}`, true);
+    xhr2.open('get', `${protocol}//${host}/api?lat=${currentLat}&lon=${currentLon}`, true);
 
     xhr2.onload = function() {
         if(this.status === 200) {
@@ -60,7 +59,7 @@ function show() {
     
     placeholderCity.innerText = wthData.name;
     placeholderTemp.innerText = `${Math.round(wthData.main.temp)}\xB0C`;
-    placeholderIcon.src = `https://openweathermap.org/img/wn/${wthData.weather[wthData.weather.length-1].icon}@4x.png`;
+    placeholderIcon.src = `${protocol}//openweathermap.org/img/wn/${wthData.weather[wthData.weather.length-1].icon}@4x.png`;
     placeholderCondition.innerText = wthData.weather[wthData.weather.length-1].description; 
     placeholderHumidity.innerText = `${Math.round(wthData.main.humidity)} %`;
     placeholderPressure.innerText = `${Math.round(wthData.main.pressure)} hPa`;
@@ -72,12 +71,12 @@ function show() {
     let currentTime = (new Date).getTime() / 1000;
     if(currentTime >= wthData.sys.sunrise && currentTime <= wthData.sys.sunset) {
         document.getElementById('main-container').style.cssText = `
-            background-image: url('${protocol}://${host}/img/bg_day.png');
+            background-image: url('${protocol}//${host}/img/bg_day.png');
         `;
     }
     else {
         document.getElementById('main-container').style.cssText = `
-            background-image: url('${protocol}://${host}/img/bg_night.png');
+            background-image: url('${protocol}//${host}/img/bg_night.png');
         `;
     }
 }
@@ -92,7 +91,7 @@ buttonSearch.addEventListener('click', () => {
     buttonSearch.className = 'btn btn-success';
     let xhr = new XMLHttpRequest();
 
-    xhr.open('get', `${protocol}://${host}/api?q=${inputSearch.value}`, true);
+    xhr.open('get', `${protocol}//${host}/api?q=${inputSearch.value}`, true);
 
     xhr.onload = function() {
         if(this.status === 200) {
