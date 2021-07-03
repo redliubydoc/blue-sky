@@ -14,10 +14,10 @@ const placeholderFeelslike = document.getElementById('main-feelslike');
 const inputSearch = document.getElementById('main-search-input');
 const buttonSearch = document.getElementById('main-search-button');
 
-
 let wthData;
 let currentLat;
 let currentLon;
+let isCelsius = true;
 
 
 // to fetch weather data based on current location
@@ -95,10 +95,11 @@ buttonSearch.addEventListener('click', () => {
 
     xhr.onload = function() {
         if(this.status === 200) {
-            wthData = JSON.parse(this.responseText);
+            let t = JSON.parse(this.responseText);
             
             // on receiving valid data
-            if(wthData.cod === 200) {
+            if(t.cod === 200) {
+                wthData = t;
                 show();
             }
             else {
@@ -110,4 +111,25 @@ buttonSearch.addEventListener('click', () => {
     }
 
     xhr.send();
+});
+
+placeholderTemp.addEventListener('click', () => {
+    let mainTempF;
+    let feelslikeF;
+    let mainTempC = wthData.main.temp;
+    let feelslikeC = wthData.main.feels_like;
+    
+
+    if(isCelsius) {
+        mainTempF = (mainTempC * (9.0 / 5.0)) + 32;
+        feelslikeF = (feelslikeC * (9.0 / 5.0)) + 32;
+
+        placeholderTemp.innerText = `${Math.round(mainTempF)}\xB0F`;
+        placeholderFeelslike.innerText = `${Math.round(feelslikeF)}\xB0F`;
+    }
+    else {
+        placeholderTemp.innerText = `${Math.round(mainTempC)}\xB0C`;
+        placeholderFeelslike.innerText = `${Math.round(feelslikeC)}\xB0C`;
+    }
+    isCelsius = !isCelsius;
 });

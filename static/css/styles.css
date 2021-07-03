@@ -75,6 +75,11 @@
 
 #main-temp {
     font-size: 500%;
+    
+}
+
+#main-temp:hover {
+    cursor: pointer;
 }
 
 #main-condition {
